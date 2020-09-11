@@ -1,0 +1,8 @@
+<div>
+  Filter: <input type="text" [(ngModel)]="searchName" placeholder="type the starting letter"/>
+</div>
+<div class="container" >
+  <div class="box" *ngFor="let element of results | searchFilter:searchName">
+    <img src="{{element.owner.avatar_url}}" alt="user photo"/>  
+    <span>{{element.name}}</span></div>
+</div>
